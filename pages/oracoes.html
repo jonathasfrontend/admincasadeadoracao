@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Orações</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="shortcut icon" href="../public/img/logobranco.ico" type="image/x-icon" sizes="256x256">
+</head>
+<body>
+  <%- include('./partials/header.html') %>
+  
+  <div class="container">
+    <div class="container-pedido">
+      <% for(let i = 0; i < listoracoes.length; i++) { %>
+        <div class="pedido">
+            <h3><%= listoracoes[i].name %></h3>
+            <p><%= listoracoes[i].telefone %> - <%= listoracoes[i].createdAt %></p>
+            <p><%= listoracoes[i].pedido %></p>
+        </div>
+      <% }%>
+    </div>
+  </div>
+    
+</body>
+</html>

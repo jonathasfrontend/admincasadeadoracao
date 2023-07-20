@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 5%;
+  background-color: #e6e6e6;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo{
+  width: 50px;
+  height: 50px;
+}
+header .logo img{
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+header .menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .menu li{
+  margin: 0 10px;
+}
+header .menu li a{
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #212121;
+  color: #ffffff;
+}
+header .logout{
+  text-decoration: none;
+  background-color: #fa404c;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .container-pedido{
+  width: 100%;
+  height: 100%;
+  margin: 4.5em 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .container-pedido .pedido{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 6px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .container-pedido .pedido p{
+  margin: 0 10px;
+}
+.container .container-pedido .pedido p:nth-child(2){
+  padding: 20px;
+}
+
+/* blog ##################### */
+
+.container .container-pedido form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #bbbbbb;
+  padding: 10px;
+  border-radius: 4px;
+}
+.container .container-pedido form input{
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 10px;
+  background-color: #ffffff;
+  margin: 10px 0;
+}
+.container .container-pedido form input:focus{
+  outline:none!important ;
+}
+.container .container-pedido form textarea:focus{
+  outline:none!important ;
+}
+.container .container-pedido form input[type="submit"]{
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffffff;
+}
+.container .container-pedido form textarea{
+  resize: none;
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* cdm #################################### */
+
+.container .container-cdm{
+  width: 100%;
+  height: 100%;
+  margin: 4.5em 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .container-cdm .user{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 6px;
+  margin: 10px;
+}
