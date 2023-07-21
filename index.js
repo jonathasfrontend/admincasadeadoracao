@@ -3,9 +3,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const axios = require('axios');
 const mongoose = require('mongoose')
-const User = require('./models/User');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+
+
+const User = require('./models/User');
+const Noticias = require('./models/noticias');
 
 const jwtSecret = 'casadeadoracao.midia.net.br@Jonathas';
 
@@ -110,8 +113,9 @@ app.get('/blog', authMiddleware, async (req, res) => {
   }));
 
   post.reverse();
+  const contagem = post.length;
   const nLimit = post.slice(0, 8);
-  res.render('blog', {nLimit})
+  res.render('blog', {nLimit, contagem});
 })
 
 app.post('/blog', authMiddleware,async (req, res) => {
@@ -123,6 +127,28 @@ app.post('/blog', authMiddleware,async (req, res) => {
     await axios.post(process.env.URL_ADD_NOTICIA_POST_MONGO, data);
     res.redirect('/blog')
 })
+
+app.get('/blog-delet/:id', authMiddleware, async (req, res) => {
+  try {
+    await Noticias.deleteOne({ _id: req.params.id });
+    res.redirect('/blog')
+  } catch (error) {
+    console.log(error)
+  }
+});
+app.get('/sair', authMiddleware, async (req, res) => {
+  try {
+  const cookieName = 'token';
+  const cookieOptions = {
+    httpOnly: true,
+    maxAge: 0,
+  };
+  res.cookie(cookieName, '', cookieOptions);
+  res.redirect('/');
+  } catch (error) {
+    console.log(error)
+  }
+});
 
 app.get('/cursodemembresia', authMiddleware, async (req, res) => {
   const cursodemembresia = await axios.get(process.env.URL_ADD_CDM_GET_MONGO);

@@ -40,6 +40,8 @@ header .menu li a{
   border-radius: 4px;
   background-color: #212121;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
 }
 header .logout{
   text-decoration: none;
@@ -62,7 +64,6 @@ header .logout{
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .container .container-pedido .pedido{
@@ -78,8 +79,24 @@ header .logout{
   align-items: center;
   justify-content: space-between;
 }
+.container .container-pedido .pedido h3{
+  font-size: 20px;
+  font-weight: 700;
+}
 .container .container-pedido .pedido p{
   margin: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container .container-pedido .pedido .delete{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #fa404c;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
 }
 .container .container-pedido .pedido p:nth-child(2){
   padding: 20px;
@@ -87,7 +104,7 @@ header .logout{
 
 /* blog ##################### */
 
-.container .container-pedido form{
+.container .container-pedido .cadBlog{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -98,7 +115,7 @@ header .logout{
   padding: 10px;
   border-radius: 4px;
 }
-.container .container-pedido form input{
+.container .container-pedido .cadBlog input{
   width: 100%;
   height: 40px;
   border-radius: 4px;
@@ -107,18 +124,18 @@ header .logout{
   background-color: #ffffff;
   margin: 10px 0;
 }
-.container .container-pedido form input:focus{
+.container .container-pedido .cadBlog input:focus{
   outline:none!important ;
 }
-.container .container-pedido form textarea:focus{
+.container .container-pedido .cadBlog textarea:focus{
   outline:none!important ;
 }
-.container .container-pedido form input[type="submit"]{
+.container .container-pedido .cadBlog input[type="submit"]{
   cursor: pointer;
   background-color: #212121;
   color: #ffffff;
 }
-.container .container-pedido form textarea{
+.container .container-pedido .cadBlog textarea{
   resize: none;
   width: 100%;
   height: 300px;
@@ -126,6 +143,20 @@ header .logout{
   border: none;
   padding: 10px;
   background-color: #ffffff;
+}
+.container .container-pedido .info{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.container .container-pedido .info p{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* cdm #################################### */

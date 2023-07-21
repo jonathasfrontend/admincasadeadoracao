@@ -12,7 +12,11 @@
 
   <div class="container">
     <div class="container-pedido">
-      <form action="/blog" method="post">
+      <div class="info">
+        <p>Usuario: casadeadoracao@cda.email.com</p>
+        <p><%= contagem %> noticias cadastradas</p>
+      </div>
+      <form action="/blog" class="cadBlog" method="post">
         <h1>Cadastrar noticia</h1>
         <input type="text" placeholder="Titulo" required name="title">
         <textarea rows="4" cols="39" maxlength="700" required placeholder="Assunto" name="assunto"></textarea>
@@ -22,7 +26,8 @@
       <% for(let i = 0; i < nLimit.length; i++) { %>
         <div class="pedido">
             <h3><%= nLimit[i].title %></h3>
-            <p><%= nLimit[i].createdAt %> - <%= nLimit[i].autor %></p>
+            <p><%= nLimit[i].createdAt %> - por: <strong><%= nLimit[i].autor %></strong></p>
+            <a class="delete" href="/blog-delet/<%= nLimit[i].id %>">Deletar</a>
         </div>
       <% }%>
     </div>
