@@ -53,10 +53,10 @@ app.post('/', async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     if (!user) {
-      return res.status(401).json({ message: 'Usuario invalido' });
+      return res.send('Usuario invalido')
     }
     if (user.password !== password) {
-      return res.status(401).json({ message: 'Senha invalida' });
+      return res.send('Senha invalida')
     }
 
     const cookieOptions = {
