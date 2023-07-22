@@ -19,15 +19,16 @@
       <form action="/blog" class="cadBlog" method="post">
         <h1>Cadastrar noticia</h1>
         <input type="text" placeholder="Titulo" required name="title">
-        <textarea rows="4" cols="39" maxlength="700" required placeholder="Assunto" name="assunto"></textarea>
+        <textarea required placeholder="Assunto" name="assunto"></textarea>
         <input type="text" placeholder="Autor" required name="autor">
-        <input type="submit" value="Enviar">
+        <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
+        <!-- <input type="submit" value="Cadastrar"> -->
       </form>
       <% for(let i = 0; i < nLimit.length; i++) { %>
         <div class="pedido">
             <h3><%= nLimit[i].title %></h3>
             <p><%= nLimit[i].createdAt %> - por: <strong><%= nLimit[i].autor %></strong></p>
-            <a class="delete" href="/blog-delet/<%= nLimit[i].id %>">Deletar</a>
+            <a class="delete" href="/blog-delet/<%= nLimit[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
         </div>
       <% }%>
     </div>

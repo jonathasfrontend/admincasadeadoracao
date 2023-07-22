@@ -174,6 +174,6 @@ mongoose.connect('mongodb+srv://root:Jonathas001@cluster0.vmkcvsj.mongodb.net/?r
 .then(()=>{console.log("bd connected")})
 .catch(()=>{console.log("Falha ao conectar com o banco")})
 
-app.listen(process.env.PORT || 3000,()=>{
-  console.log('server rodando na porta 3000');
+app.listen(process.env.PORT || 4000,()=>{
+  console.log('server rodando na porta 4000');
 })
