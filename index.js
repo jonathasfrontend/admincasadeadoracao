@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, '/pages'));
 const authMiddleware = (req, res, next ) => {
   const token = req.cookies.token;
   if(!token) {
-    return res.status(401).json( { message: 'Não autorizado ou tempo de esgotado'} );
+    return res.redirect('/')
   }
 
   try {
@@ -38,7 +38,7 @@ const authMiddleware = (req, res, next ) => {
     req.userId = decoded.userId;
     next();
   } catch(error) {
-    res.status(401).json( { message: 'Não autorizado ou tempo de esgotado'} );
+    res.redirect('/')
   }
 }
 
