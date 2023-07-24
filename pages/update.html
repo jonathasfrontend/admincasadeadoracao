@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin | Blog</title>
+  <title>Admin atualizar noticia | Blog</title>
   <link rel="stylesheet" href="../public/css/style.css">
   <link rel="shortcut icon" href="../public/img/logobranco.ico" type="image/x-icon" sizes="256x256">
 </head>
@@ -16,12 +16,11 @@
         <p>Usuario: casadeadoracao@cda.email.com</p>
         <p><%= contagem %> noticias cadastradas</p>
       </div>
-      <form action="/blog" class="cadBlog" method="post">
-        <h1>Cadastrar noticia</h1>
-        <input type="text" placeholder="Titulo" required name="title">
-        <textarea required placeholder="Assunto" name="assunto"></textarea>
-        <input type="text" placeholder="Autor" required name="autor">
-        <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
+      <form action="/blog-update/<%= data._id %>" class="cadBlog" method="post">
+        <h1>Atualizar noticia</h1>
+        <input type="text" placeholder="Titulo" required name="title" value="<%= data.title %>">
+        <textarea placeholder="Assunto" required name="body"><%= data.body %></textarea>
+        <button type="submit" class="submit"><p>Atualizar</p><img src="../public/img/update.svg" alt=""></button>
       </form>
       <% for(let i = 0; i < nLimit.length; i++) { %>
         <div class="pedido">

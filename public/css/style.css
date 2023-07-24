@@ -146,6 +146,7 @@ header .logout img{
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  margin-top: 10px;
 }
 .container .container-pedido .cadBlog .submit p{
   font-size: 16px;
@@ -181,7 +182,11 @@ header .logout img{
   font-weight: 500;
   font-family: 'Courier New', Courier, monospace;
 }
-.container .container-pedido .pedido .delete{
+.container .container-pedido .pedido .actionbtn{
+  display: flex;
+  align-items: center;
+}
+.container .container-pedido .pedido .actionbtn .delete{
   text-decoration: none;
   color: #ffffff;
   padding: 10px;
@@ -190,14 +195,31 @@ header .logout img{
   border: none;
   font-size: 14px;
   font-weight: 700;
+  margin-left: 10px;
 }
-.container .container-pedido .pedido p:nth-child(2){
-  padding: 20px;
-}
-.container .container-pedido .pedido .delete img{
+.container .container-pedido .pedido .actionbtn .delete img{
   width: 20px;
   height: 20px;
   filter: invert(1);
+}
+.container .container-pedido .pedido .actionbtn .update{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #4ffa40;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.container .container-pedido .pedido .actionbtn .update img{
+  width: 20px;
+  height: 20px;
+  /* filter: invert(1); */
+}
+.container .container-pedido .pedido p:nth-child(2){
+  padding: 20px;
 }
 
 /* cdm #################################### */

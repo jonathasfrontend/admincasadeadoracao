@@ -47,7 +47,6 @@ const authMiddleware = (req, res, next ) => {
 app.get('/', async  (req, res) => {
   res.render('login')
 })
-// Logar
 app.post('/', async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -73,6 +72,8 @@ app.post('/', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
+
 // app.post('/', async (req, res) => {
 //   try {
 //     const { username, password } = req.body;
@@ -117,7 +118,6 @@ app.get('/blog', authMiddleware, async (req, res) => {
   const nLimit = post.slice(0, 8);
   res.render('blog', {nLimit, contagem});
 })
-
 app.post('/blog', authMiddleware,async (req, res) => {
   const data = {
       title: req.body.title,
@@ -135,6 +135,40 @@ app.get('/blog-delet/:id', authMiddleware, async (req, res) => {
   } catch (error) {
     console.log(error)
   }
+});
+app.get('/blog-update/:id', authMiddleware, async (req, res) => {
+  const noticia = await axios.get(process.env.URL_NOTICIA_GET_MONGO);
+  const post = noticia.data.map(val => ({
+      id: val._id,
+      title: val.title,
+      body: val.body,
+      createdAt: val.createdAt,
+      autor: val.autor
+  }));
+
+  const contagem = post.length;
+
+  post.reverse();
+  const nLimit = post.slice(0, 8);
+  const data = await Noticias.findOne({ _id: req.params.id });
+
+  res.render('update', {data, contagem, nLimit})
+
+});
+app.post('/blog-update/:id', authMiddleware, async (req, res) => {
+  try {
+    const { title, body } = req.body;
+    await Noticias.findByIdAndUpdate(req.params.id, {
+      title,
+      body 
+    });
+
+    res.redirect(`/blog-update/${req.params.id}`);
+
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 app.get('/sair', authMiddleware, async (req, res) => {
   try {
