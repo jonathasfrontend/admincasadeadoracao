@@ -102,13 +102,13 @@ app.get('/oracoes', authMiddleware, async  (req, res) => {
 
   res.render('oracoes', {listoracoes})
 })
-
 app.get('/blog', authMiddleware, async (req, res) => {
   const noticia = await axios.get(process.env.URL_NOTICIA_GET_MONGO);
   const post = noticia.data.map(val => ({
       id: val._id,
       title: val.title,
       body: val.body,
+      category: val.category,
       createdAt: val.createdAt,
       autor: val.autor
   }));
@@ -122,12 +122,12 @@ app.post('/blog', authMiddleware,async (req, res) => {
   const data = {
       title: req.body.title,
       body: req.body.assunto,
+      category: req.body.category,
       autor: req.body.autor,
     };
     await axios.post(process.env.URL_ADD_NOTICIA_POST_MONGO, data);
     res.redirect('/blog')
 })
-
 app.get('/blog-delet/:id', authMiddleware, async (req, res) => {
   try {
     await Noticias.deleteOne({ _id: req.params.id });
@@ -183,7 +183,6 @@ app.get('/sair', authMiddleware, async (req, res) => {
     console.log(error)
   }
 });
-
 app.get('/cursodemembresia', authMiddleware, async (req, res) => {
   const cursodemembresia = await axios.get(process.env.URL_ADD_CDM_GET_MONGO);
   const usersCursodemembresia = cursodemembresia.data.map(val => ({

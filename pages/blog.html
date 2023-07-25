@@ -20,13 +20,14 @@
         <h1>Cadastrar noticia</h1>
         <input type="text" placeholder="Titulo" required name="title">
         <textarea required placeholder="Assunto" name="assunto"></textarea>
+        <input type="text" placeholder="Categoria" required name="category">
         <input type="text" placeholder="Autor" required name="autor">
         <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
       </form>
       <% for(let i = 0; i < nLimit.length; i++) { %>
         <div class="pedido">
             <h3><%= nLimit[i].title %></h3>
-            <p><%= nLimit[i].createdAt %> - por: <strong><%= nLimit[i].autor %></strong></p>
+            <p><%= nLimit[i].createdAt %> - por: <strong><%= nLimit[i].autor %></strong> categoria: <%= nLimit[i].category %></p>
             <div class="actionbtn">
               <a class="delete" href="/blog-delet/<%= nLimit[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
               <a class="update" href="/blog-update/<%= nLimit[i].id %>"><img src="../public/img/update.svg" alt=""></a>
