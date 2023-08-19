@@ -1,0 +1,150 @@
+.container-blog{
+  width: 100%;
+}
+.container-blog .container-content-blog{
+  width: 100%;
+  height: 100%;
+  margin-top: 4.5em;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-blog .container-content-blog .info{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.container-blog .container-content-blog .info p{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container-blog .container-content-blog .cadBlog{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #bbbbbb;
+  padding: 10px;
+  border-radius: 4px;
+}
+.container-blog .container-content-blog .cadBlog input{
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 10px;
+  background-color: #ffffff;
+  margin: 10px 0;
+}
+.container-blog .container-content-blog .cadBlog input:focus{
+  outline:none!important ;
+}
+.container-blog .container-content-blog .cadBlog textarea:focus{
+  outline:none!important ;
+}
+.container-blog .container-content-blog .cadBlog .submit{
+  border: none;
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+.container-blog .container-content-blog .cadBlog .submit p{
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.container-blog .container-content-blog .cadBlog .submit img{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+.container-blog .container-content-blog .cadBlog textarea{
+  resize: none;
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.container-blog .container-content-blog .card-noticia{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-blog .container-content-blog .card-noticia span{
+  display: flex;
+  align-items: center;
+}
+.container-blog .container-content-blog .card-noticia span p{
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0 5px;
+}
+.container-blog .container-content-blog .card-noticia .btns{
+  display: flex;
+  align-items: center;
+}
+.container-blog .container-content-blog .card-noticia .btns .delete{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fa404c;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.container-blog .container-content-blog .card-noticia .btns .delete img{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+.container-blog .container-content-blog .card-noticia .btns .update{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #4ffa40;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.container-blog .container-content-blog .card-noticia .btns .update img{
+  width: 20px;
+  height: 20px;
+}

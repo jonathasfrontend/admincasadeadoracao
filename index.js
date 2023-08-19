@@ -73,7 +73,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-
 // app.post('/', async (req, res) => {
 //   try {
 //     const { username, password } = req.body;
@@ -88,8 +87,6 @@ app.post('/', async (req, res) => {
 //   }
 // });
 
-
-
 app.get('/oracoes', authMiddleware, async  (req, res) => {
   const oracoes = await axios.get(process.env.URL_PEDIDOS_GET_MONGODB);
   const listoracoes = oracoes.data.map(val => ({
@@ -99,7 +96,7 @@ app.get('/oracoes', authMiddleware, async  (req, res) => {
       pedido: val.pedido,
       createdAt: val.createdAt,
   }));
-
+  listoracoes.reverse();
   res.render('oracoes', {listoracoes})
 })
 app.get('/blog', authMiddleware, async (req, res) => {

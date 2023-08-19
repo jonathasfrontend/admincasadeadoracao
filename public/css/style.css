@@ -42,6 +42,10 @@ header .menu li a{
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
+  transition: 0.3s;
+}
+header .menu li a:hover{
+  background-color: #2a2a2a;
 }
 header .logout{
   text-decoration: none;
@@ -51,7 +55,7 @@ header .logout{
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #ffffff;
 }
 header .logout p{
@@ -65,181 +69,32 @@ header .logout img{
   filter: invert(1);
 }
 
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
+/* cdm #################################### */
 
-.container .container-pedido{
+.container-cdm{
   width: 100%;
   height: 100%;
   margin-top: 4.5em;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.container .container-pedido .pedido{
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background-color: #212121;
-  color: #ffffff;
-  border-radius: 6px;
-  margin: 10px;
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
-.container .container-pedido .pedido h3{
-  font-size: 20px;
-  font-weight: 700;
-}
-.container .container-pedido .pedido p{
-  margin: 0 10px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* blog ##################### */
-
-.container .container-pedido .cadBlog{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  background-color: #bbbbbb;
-  padding: 10px;
-  border-radius: 4px;
-}
-.container .container-pedido .cadBlog input{
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  padding: 0 10px;
-  background-color: #ffffff;
-  margin: 10px 0;
-}
-.container .container-pedido .cadBlog input:focus{
-  outline:none!important ;
-}
-.container .container-pedido .cadBlog textarea:focus{
-  outline:none!important ;
-}
-.container .container-pedido .cadBlog .submit{
-  border: none;
+.container-cdm .user{
   width: 300px;
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  padding: 0 10px;
-  cursor: pointer;
-  background-color: #212121;
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-}
-.container .container-pedido .cadBlog .submit p{
-  font-size: 16px;
-  font-weight: 700;
-  margin-right: 10px;
-  color: #ffffff;
-}
-.container .container-pedido .cadBlog .submit img{
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
-}
-.container .container-pedido .cadBlog textarea{
-  resize: none;
-  width: 100%;
-  height: 300px;
-  border-radius: 4px;
-  border: none;
-  padding: 10px;
-  background-color: #ffffff;
-}
-.container .container-pedido .info{
-  width: 100%;
   height: 100%;
   padding: 20px;
   background-color: #212121;
   color: #ffffff;
   border-radius: 6px;
+  margin: 0 10px 10px 0;
+}
+.container-cdm .user h3{
+  font-size: 18px;
+  font-weight: 500;
   margin: 10px 0;
 }
-.container .container-pedido .info p{
+.container-cdm .user p{
   font-size: 14px;
-  font-weight: 500;
-  font-family: 'Courier New', Courier, monospace;
-}
-.container .container-pedido .pedido .actionbtn{
-  display: flex;
-  align-items: center;
-}
-.container .container-pedido .pedido .actionbtn .delete{
-  text-decoration: none;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #fa404c;
-  border: none;
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 10px;
-}
-.container .container-pedido .pedido .actionbtn .delete img{
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
-}
-.container .container-pedido .pedido .actionbtn .update{
-  text-decoration: none;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #4ffa40;
-  border: none;
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 10px;
-}
-.container .container-pedido .pedido .actionbtn .update img{
-  width: 20px;
-  height: 20px;
-  /* filter: invert(1); */
-}
-.container .container-pedido .pedido p:nth-child(2){
-  padding: 20px;
-}
-
-/* cdm #################################### */
-
-.container .container-cdm{
-  width: 100%;
-  height: 100%;
-  margin: 4.5em 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.container .container-cdm .user{
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background-color: #212121;
-  color: #ffffff;
-  border-radius: 6px;
-  margin: 10px;
+  font-weight: 300;
+  margin: 5px 0;
 }

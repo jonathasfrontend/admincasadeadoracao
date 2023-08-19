@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin atualizar noticia | Blog</title>
-  <link rel="stylesheet" href="../public/css/style.css">
-  <link rel="shortcut icon" href="../public/img/logobranco.ico" type="image/x-icon" sizes="256x256">
+  <%- include('./partials/head.html') %>
 </head>
 <body>
   <%- include('./partials/header.html') %>
 
-  <div class="container">
-    <div class="container-pedido">
+  <div class="container-blog">
+    <div class="container-content-blog">
+
       <div class="info">
         <p>Usuario: casadeadoracao@cda.email.com</p>
         <p><%= contagem %> noticias cadastradas</p>
       </div>
+
       <form action="/blog-update/<%= data._id %>" class="cadBlog" method="post">
         <h1>Atualizar noticia</h1>
         <input type="text" placeholder="Titulo" required name="title" value="<%= data.title %>">
         <textarea placeholder="Assunto" required name="body"><%= data.body %></textarea>
         <button type="submit" class="submit"><p>Atualizar</p><img src="../public/img/update.svg" alt=""></button>
       </form>
+
       <% for(let i = 0; i < nLimit.length; i++) { %>
-        <div class="pedido">
-            <h3><%= nLimit[i].title %></h3>
-            <p><%= nLimit[i].createdAt %> - por: <strong><%= nLimit[i].autor %></strong></p>
-            <div class="actionbtn">
-              <a class="delete" href="/blog-delet/<%= nLimit[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
-              <a class="update" href="/blog-update/<%= nLimit[i].id %>"><img src="../public/img/update.svg" alt=""></a>
-            </div>
+        <div class="card-noticia">
+          <span>
+            <p>Titulo: <%= nLimit[i].title %></p>
+            <p>Data: <%= nLimit[i].createdAt %></p>
+            <p>Autor: <%= nLimit[i].autor %></p>
+            <p>Categoria: <%= nLimit[i].category %></p>
+          </span>
+          <div class="btns">
+            <a class="delete" href="/blog-delet/<%= nLimit[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
+            <a class="update" href="/blog-update/<%= nLimit[i].id %>"><img src="../public/img/update.svg" alt=""></a>
+          </div>
         </div>
       <% }%>
+
     </div>
   </div>
     

@@ -4,10 +4,21 @@ form{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
-form input{
-  outline-color: #4f4fff;
+form .content-form{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+  /* border: 2px solid #121214; */
+  /* background-color: #202024; */
+}
+form .content-form input{
+  outline-color: none;
+  border-radius: 4px;
+  /* outline-color: #4f4fff; */
   width: 300px;
   height: 40px;
   padding: 0 5px;
@@ -16,12 +27,18 @@ form input{
   border-bottom: 1px solid #5b5b5b;
   transition: 0.3s;
 }
-/* form input:focus{
-  border-bottom: 2px solid #5b5b5b;
-} */
-form input[type='submit']{
+form .content-form input[type='email']:focus,
+form .content-form input[type='password']:focus{
+  border: 2px solid #ff0000;
+  padding-left: 7px;
+}
+form .content-form input[type='submit']{
+  border: none;
   background-color: #121214;
   color: #ffffff;
   cursor: pointer;
   border-radius: 4px;
+}
+form .content-form input[type='submit']:hover{
+  background-color: #2a2a2a;
 }
