@@ -1,17 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
 header{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 5%;
-  background-color: #e6e6e6;
+  padding: 10px 3%;
+  background-color: #212121;
   z-index: 200;
   display: flex;
   align-items: center;
@@ -24,28 +17,7 @@ header .logo{
 header .logo img{
   width: 100%;
   height: 100%;
-  filter: invert(1);
-}
-header .menu{
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-header .menu li{
-  margin: 0 10px;
-}
-header .menu li a{
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #212121;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-header .menu li a:hover{
-  background-color: #2a2a2a;
+  object-fit: cover;
 }
 header .logout{
   text-decoration: none;
@@ -69,16 +41,69 @@ header .logout img{
   filter: invert(1);
 }
 
-/* cdm #################################### */
+.menu{
+  width: 0px;
+  height: 100vh;
+  background-color: #212121;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+  box-shadow: 0 0 10px #0000009d;
+}
+.menu.active{
+  width: 250px;
+}
+.menu .menu-items{
+  margin-top: 4.5em;
+  width: 100%;
+  /* padding: 20px; */
+}
+.menu .menu-items li a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.menu .menu-items li a:hover{
+  background-color: #2a2a2a;
+}
 
-.container-cdm{
+.toggle{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  border: none;
+  background-color: #212121;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 10px #0000009d;
+}
+.toggle.active{
+  transform: rotate(315deg);
+}
+.toggle img{
   width: 100%;
   height: 100%;
-  margin-top: 4.5em;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  filter: invert(1);
 }
+
+/* cdm #################################### */
+
 .container-cdm .user{
   width: 300px;
   height: 100%;
