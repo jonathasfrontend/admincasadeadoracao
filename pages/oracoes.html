@@ -14,6 +14,9 @@
             <h3><%= listoracoes[i].name %></h3>
             <p><%= listoracoes[i].telefone %> - <%= listoracoes[i].createdAt %></p>
             <p><%= listoracoes[i].pedido %></p>
+            <div class="btns">
+              <a class="delete" href="https://serverpedidoscda.vercel.app/deletaroracao/<%= listoracoes[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
+            </div>
         </div>
       <% }%>
     </div>

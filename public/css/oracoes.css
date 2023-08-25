@@ -13,6 +13,26 @@
   flex-direction: column;
   justify-content: center;
 }
+.container-oracoes .container-pedido-oracoes .card-pedido .btns{
+  display: flex;
+  align-items: center;
+}
+.container-oracoes .container-pedido-oracoes .card-pedido .btns .delete{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fa404c;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.container-oracoes .container-pedido-oracoes .card-pedido .btns .delete img{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
 .container-oracoes .container-pedido-oracoes .card-pedido{
   width: 100%;
   height: 100%;
