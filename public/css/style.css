@@ -5,7 +5,7 @@ header{
   width: 100%;
   padding: 10px 3%;
   background-color: #212121;
-  z-index: 200;
+  z-index: 300;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,13 +47,14 @@ header .logout img{
   background-color: #212121;
   position: fixed;
   overflow: hidden;
+  z-index: 200;
   top: 0;
   left: 0;
   list-style: none;
   display: flex;
   align-items: center;
   flex-direction: column;
-  transition: 0.5s;
+  transition: 0.3s;
   box-shadow: 0 0 10px #0000009d;
 }
 .menu.active{

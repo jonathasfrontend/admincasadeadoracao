@@ -195,6 +195,18 @@ app.get('/cursodemembresia', authMiddleware, async (req, res) => {
 
   res.render('cursodemembresia', {usersCursodemembresia})
 })
+app.get('/contatos', authMiddleware, async (req, res) => {
+  const contatos = await axios.get(process.env.URL_GET_CONTATO_MONGO);
+  const mContatos = contatos.data.map(val => ({
+      id: val._id,
+      name: val.name,
+      number: val.number,
+      menssagem: val.menssagem,
+      createdAt: val.createdAt,
+  }));
+
+  res.render('contatos', {mContatos})
+})
 
 app.use(function(req, res, next) {
   res.status(404).render('404');
