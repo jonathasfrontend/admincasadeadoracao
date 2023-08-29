@@ -139,6 +139,7 @@ app.get('/blog-update/:id', authMiddleware, async (req, res) => {
       id: val._id,
       title: val.title,
       body: val.body,
+      category: val.category,
       createdAt: val.createdAt,
       autor: val.autor
   }));

@@ -17,9 +17,18 @@
 
       <form action="/blog-update/<%= data._id %>" class="cadBlog" method="post">
         <h1>Atualizar noticia</h1>
-        <input type="text" placeholder="Titulo" required name="title" value="<%= data.title %>">
-        <textarea placeholder="Assunto" required name="body"><%= data.body %></textarea>
-        <button type="submit" class="submit"><p>Atualizar</p><img src="../public/img/update.svg" alt=""></button>
+
+        <div class="cadBlog-content">
+          <div class="left">
+            <input type="text" placeholder="Titulo" required name="title" value="<%= data.title %>">
+            <input type="text" placeholder="Autor" required name="autor" value="<%= data.autor %>">
+            <input type="text" placeholder="Categoria" required name="category" value="<%= data.category %>">
+            <button type="submit" class="submit"><p>Atualizar</p><img src="../public/img/update.svg" alt=""></button>
+          </div>
+          <div class="rigth">
+            <textarea required placeholder="Assunto" name="assunto"><%= data.body %></textarea>
+          </div>
+        </div>
       </form>
 
       <% for(let i = 0; i < nLimit.length; i++) { %>
@@ -32,7 +41,6 @@
           </span>
           <div class="btns">
             <a class="delete" href="/blog-delet/<%= nLimit[i].id %>"><img src="../public/img/trash-bin.svg" alt=""></a>
-            <a class="update" href="/blog-update/<%= nLimit[i].id %>"><img src="../public/img/update.svg" alt=""></a>
           </div>
         </div>
       <% }%>
@@ -40,6 +48,6 @@
     </div>
   </div>
     
-  
+  <script src="../public/js/script.js"></script>
 </body>
 </html>

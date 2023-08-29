@@ -5,6 +5,10 @@ form{
   align-items: center;
   justify-content: center;
 }
+form .content-form h1{
+  font-size: 2em;
+  font-weight: 800;
+}
 form .content-form{
   display: flex;
   padding: 20px;
@@ -12,13 +16,12 @@ form .content-form{
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
-  /* border: 2px solid #121214; */
+  border: 1px solid #121214;
   /* background-color: #202024; */
 }
 form .content-form input{
   outline-color: none;
   border-radius: 4px;
-  /* outline-color: #4f4fff; */
   width: 300px;
   height: 40px;
   padding: 0 5px;
@@ -29,7 +32,7 @@ form .content-form input{
 }
 form .content-form input[type='email']:focus,
 form .content-form input[type='password']:focus{
-  border: 2px solid #ff0000;
+  outline-color: #4f4fff;
   padding-left: 7px;
 }
 form .content-form input[type='submit']{

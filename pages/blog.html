@@ -16,11 +16,17 @@
 
       <form action="/blog" class="cadBlog" method="post">
         <h1>Cadastrar noticia</h1>
-        <input type="text" placeholder="Titulo" required name="title">
-        <textarea required placeholder="Assunto" name="assunto"></textarea>
-        <input type="text" placeholder="Categoria" required name="category">
-        <input type="text" placeholder="Autor" required name="autor">
-        <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
+        <div class="cadBlog-content">
+          <div class="left">
+            <input type="text" placeholder="Titulo" required name="title">
+            <input type="text" placeholder="Autor" required name="autor">
+            <input type="text" placeholder="Categoria" required name="category">
+            <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
+          </div>
+          <div class="rigth">
+            <textarea required placeholder="Assunto" name="assunto"></textarea>
+          </div>
+        </div>
       </form>
 
       <% for(let i = 0; i < nLimit.length; i++) { %>
