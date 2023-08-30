@@ -19,27 +19,6 @@ header .logo img{
   height: 100%;
   object-fit: cover;
 }
-header .logout{
-  text-decoration: none;
-  background-color: #fa404c;
-  padding: 10px ;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-  border-radius: 4px;
-  color: #ffffff;
-}
-header .logout p{
-  font-size: 16px;
-  font-weight: 700;
-  margin-right: 10px;
-}
-header .logout img{
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
-}
 
 .menu{
   width: 0px;
@@ -54,6 +33,7 @@ header .logout img{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   transition: 0.3s;
   box-shadow: 0 0 10px #0000009d;
 }
@@ -79,7 +59,31 @@ header .logout img{
 .menu .menu-items li a:hover{
   background-color: #2a2a2a;
 }
+.menu .logout:hover{
+  background-color: #2a2a2a;
+}
 
+.menu .logout{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.menu .logout p{
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.menu .logout img{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
 .toggle{
   position: fixed;
   bottom: 20px;

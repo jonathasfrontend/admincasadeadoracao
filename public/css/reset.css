@@ -6,6 +6,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-input-placeholder{
+  color: #595959;
+}
+
 /* cdm #################################### */
 
 .container-cdm{

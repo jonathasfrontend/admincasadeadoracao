@@ -16,18 +16,17 @@ form .content-form{
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
-  border: 1px solid #121214;
-  /* background-color: #202024; */
 }
 form .content-form input{
   outline-color: none;
   border-radius: 4px;
   width: 300px;
   height: 40px;
+  background-color: #212121;
+  color: #ffffff;
   padding: 0 5px;
   margin: 10px 0;
   border: none;
-  border-bottom: 1px solid #5b5b5b;
   transition: 0.3s;
 }
 form .content-form input[type='email']:focus,
@@ -35,13 +34,34 @@ form .content-form input[type='password']:focus{
   outline-color: #4f4fff;
   padding-left: 7px;
 }
-form .content-form input[type='submit']{
+form .content-form .submit{
   border: none;
-  background-color: #121214;
-  color: #ffffff;
-  cursor: pointer;
+  width: 100%;
+  height: 40px;
   border-radius: 4px;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 10px;
 }
-form .content-form input[type='submit']:hover{
+form .content-form .submit p{
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px;
+  color: #ffffff;
+}
+form .content-form .submit img{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+form .content-form .submit:hover{
   background-color: #2a2a2a;
 }
