@@ -109,11 +109,17 @@ app.get('/blog', authMiddleware, async (req, res) => {
       createdAt: val.createdAt,
       autor: val.autor
   }));
+  
+  const categoria = await axios.get(process.env.URL_GET_CATEGORIA_MONGO);
+  const getCategoria = categoria.data.map(val => ({
+      id: val._id,
+      categoria: val.categoria,
+  }));
 
   post.reverse();
   const contagem = post.length;
   const nLimit = post.slice(0, 8);
-  res.render('blog', {nLimit, contagem});
+  res.render('blog', {nLimit, contagem, getCategoria});
 })
 app.post('/blog', authMiddleware,async (req, res) => {
   const data = {
@@ -168,6 +174,13 @@ app.post('/blog-update/:id', authMiddleware, async (req, res) => {
   }
 
 });
+app.post('/add-categoria', authMiddleware,async (req, res) => {
+  const data = {
+      categoria: req.body.categoria,
+    };
+    await axios.post(process.env.URL_POST_CATEGORIA_MONGO, data);
+    res.redirect('/blog')
+})
 app.get('/sair', authMiddleware, async (req, res) => {
   try {
   const cookieName = 'token';

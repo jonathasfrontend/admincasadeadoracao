@@ -9,22 +9,36 @@
 
   <div class="container-blog">
     <div class="container-content-blog">
+
       <div class="info">
         <p>Usuario: casadeadoracao@cda.email.com</p>
         <p><%= contagem %> noticias cadastradas</p>
       </div>
 
+      <form action="/add-categoria" class="cadcategoria" method="post">
+        <h1>Cadastrar categoria!</h1>
+        <div class="cadcategoria-content">
+            <input type="text" placeholder="Categoria" required name="categoria">
+            <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
+        </div>
+      </form>
+
       <form action="/blog" class="cadBlog" method="post">
-        <h1>Cadastrar noticia</h1>
+        <h1>Cadastrar noticia!</h1>
         <div class="cadBlog-content">
           <div class="left">
             <input type="text" placeholder="Titulo" required name="title">
             <input type="text" placeholder="Autor" required name="autor">
-            <input type="text" placeholder="Categoria" required name="category">
+            <select  required name="category">
+              <option selected disabled value="volvo">Nenhuma categoria selecionada!</option>
+              <% for(let i = 0; i < getCategoria.length; i++) { %>
+                <option value="<%= getCategoria[i].categoria %>"><%= getCategoria[i].categoria %></option>
+              <% }%>
+            </select>
             <button type="submit" class="submit"><p>Enviar</p><img src="../public/img/push.svg" alt=""></button>
           </div>
           <div class="rigth">
-            <textarea required placeholder="Assunto" name="assunto"></textarea>
+            <textarea required placeholder="Conteudo" name="assunto"></textarea>
           </div>
         </div>
       </form>

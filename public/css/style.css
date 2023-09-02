@@ -4,7 +4,7 @@ header{
   left: 0;
   width: 100%;
   padding: 10px 3%;
-  background-color: #212121;
+  background-color: var(--colorCardBackgroung);
   z-index: 300;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ header .logo img{
 .menu{
   width: 0px;
   height: 100vh;
-  background-color: #212121;
+  background-color: var(--colorCardBackgroung);
   position: fixed;
   overflow: hidden;
   z-index: 200;
@@ -92,7 +92,7 @@ header .logo img{
   height: 30px;
   padding: 3px;
   border: none;
-  background-color: #212121;
+  background-color: var(--colorCardBackgroung);
   border-radius: 50%;
   cursor: pointer;
   transition: 0.5s;
@@ -113,7 +113,7 @@ header .logo img{
   width: 300px;
   height: 100%;
   padding: 20px;
-  background-color: #212121;
+  background-color: var(--colorCardBackgroung);
   color: #ffffff;
   border-radius: 6px;
   margin: 0 10px 10px 0;

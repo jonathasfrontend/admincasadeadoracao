@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
+:root{
+  --colorCardBackgroung:#212121;
+}
 ::-webkit-input-placeholder{
   color: #595959;
 }
