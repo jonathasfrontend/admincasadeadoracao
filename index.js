@@ -107,7 +107,8 @@ app.get('/blog', authMiddleware, async (req, res) => {
       body: val.body,
       category: val.category,
       createdAt: val.createdAt,
-      autor: val.autor
+      autor: val.autor,
+      views: val.views
   }));
   
   const categoria = await axios.get(process.env.URL_GET_CATEGORIA_MONGO);
