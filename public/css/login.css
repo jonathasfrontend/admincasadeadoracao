@@ -1,40 +1,55 @@
-form{
+.login-container{
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('../img/fundo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
 }
-form .content-form h1{
+.login-container .backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+}
+.login-container .content-form h1{
   font-size: 2em;
   font-weight: 800;
 }
-form .content-form{
+.login-container .content-form{
   display: flex;
   padding: 20px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
+  z-index: 300;
 }
-form .content-form input{
+.login-container .content-form input{
   outline-color: none;
   border-radius: 4px;
   width: 300px;
   height: 40px;
-  background-color: var(--colorCardBackgroung);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--colorCardBackgroung);
   padding: 0 5px;
   margin: 10px 0;
   border: none;
-  transition: 0.3s;
+  transition: 0.1s;
 }
-form .content-form input[type='email']:focus,
-form .content-form input[type='password']:focus{
+.login-container .content-form input[type='email']:focus,
+.login-container .content-form input[type='password']:focus{
   outline-color: #4f4fff;
   padding-left: 7px;
 }
-form .content-form .submit{
+.login-container .content-form .submit{
   border: none;
   width: 100%;
   height: 40px;
@@ -51,17 +66,17 @@ form .content-form .submit{
   flex-wrap: nowrap;
   margin-top: 10px;
 }
-form .content-form .submit p{
+.login-container .content-form .submit p{
   font-size: 14px;
   font-weight: 700;
   margin-right: 10px;
   color: #ffffff;
 }
-form .content-form .submit img{
+.login-container .content-form .submit img{
   width: 20px;
   height: 20px;
   filter: invert(1);
 }
-form .content-form .submit:hover{
+.login-container .content-form .submit:hover{
   background-color: #2a2a2a;
 }
